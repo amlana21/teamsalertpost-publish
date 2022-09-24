@@ -1,0 +1,14 @@
+commonLabels:
+  WorkerType: fargate
+prometheus:
+  prometheusSpec:
+    additionalScrapeConfigs:
+    - job_name: My_Custom_Job
+      static_configs:
+      - targets: ['localhost:9090']
+    - job_name: Error_Importer_job
+      static_configs:
+      - targets: ['apiclusterip.default.svc.cluster.local']
+      metrics_path: /queryalertprom
+grafana:
+  adminPassword: anypassword

@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+prometheus-client
+gunicorn
+pytest
+boto3
